@@ -1,0 +1,157 @@
+html, body, ul, p {
+	margin:0;
+	padding:0;
+}
+
+#main {
+	width:480px;
+	margin:0 auto;
+	position:relative;
+}
+
+#go_prev, #go_next {
+	width:50px;
+	height:142px;
+	top:50%;
+	margin-top:-71px;
+	position:absolute;
+	z-index:2;
+	cursor:hand;
+	cursor:pointer;
+}
+
+#go_prev {
+	left:0;
+	margin-left:-65px;
+	background-image: url(../images/prev.png);
+	background-repeat: no-repeat;
+}
+
+#go_next {
+	right:0;
+	margin-right:-65px;
+	background-image: url(../images/next.png);
+	background-repeat: no-repeat;
+}
+
+#wrapper {
+	width:480px;
+	height:840px;
+	overflow:hidden;
+	position:relative;
+}
+
+#container {
+	width:10000px;
+	height:840px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+ul.imageslist {
+	list-style:none;
+	float:left;
+	width:480px;
+}
+
+ul.imageslist li {
+	width:150px;
+	height:200px;
+	margin:5px;
+	display:block;
+	float:left;
+}
+
+ul.imageslist li a {
+	width:150px;
+	height:200px;
+	display:block;
+	background-image: url(../images/lightbox-ico-loading.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+ul.imageslist li img {
+	width:150px;
+	height:200px;
+	display:none;
+	border:0;
+}
+
+div#lightbox {
+	position: absolute;
+	z-index:10;
+	left: 0;
+	top: 0;
+	background-color: black;
+	width: 100%;
+	opacity: 0.8;
+	display:none;
+}
+
+div#lightbox img {
+	position: fixed;
+	right: 30px;
+	top: 30px;
+	cursor:hand;
+	cursor:pointer;
+	opacity:0.7;
+}
+
+div#lightbox img:hover {
+	opacity:1;
+}
+
+div#imagebox {
+	position: fixed;
+	z-index:11;
+	width: 100px;
+	height:0;
+	left:50%;
+	top:50%;
+	display:none;
+}
+
+div#imagebox .box {
+	width:200px;
+	height:200px;
+	margin-left:-100%;
+	margin-top:-100px;
+	background-color: white;
+	background-image: url(../images/lightbox-ico-loading.gif);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border-color:gray;
+	border-style:solid;
+	border-width:0px;
+}
+
+div#imagebox .box img {
+	display:none;
+	margin:20px 20px 0;
+}
+
+div#imagebox .box .title {
+	overflow:auto;
+	height:40px;
+	padding:5px 20px 0;
+}
+
+form.upload_form label, form.upload_form input {
+	margin:10px 20px 0 0;
+}
+
+form.upload_form textarea {
+	margin-top:10px;
+}
+
+div.error {
+	color:red;
+	font-weight:bold;
+}
+
+div.noerror {
+	color:green;
+	font-weight:bold;
+}
